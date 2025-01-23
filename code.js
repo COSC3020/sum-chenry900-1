@@ -1,7 +1,11 @@
 function sum(a) {
-    var sum = a[0];
-    for(var i = 0; i < a.length; i++) {
-        sum += a[i];
+    if (a.length() == 1)
+        return a[0];
+    if (a.length() == 0)
+        return 0;
+    var total = a[0];
+    for(var i = 1; i < a.length; i++) {
+        total += a[i];
     }
-    return sum;
+    return total;
 }
